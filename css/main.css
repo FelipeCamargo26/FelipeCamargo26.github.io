@@ -1,0 +1,63 @@
+.introducao {
+  max-width: 1200px; /* tamanho maximo que eu quero que meu site creça */
+  margin: 0 auto; /* Alinhamento do meu site */
+  padding: 40px 20px; /* Espaçamentos que eu estou estipulando  */
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.introducao-text h1 {
+  font-size: 4.5rem;
+  line-height: 1.125; /* Esse valor é junção do valor de fonte size 4.5*16=72*1.125=80px */
+  font-weight: 700;
+  position: relative;
+}
+
+.introducao-text h1::before {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 100px;
+  background: url(../imgs/detalhe.svg) no-repeat center;
+  position: absolute;
+  top: -15px;
+  left: -40px;
+  z-index: -1;
+}
+
+@media (max-width: 1000px) {
+  .introducao-text h1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 800px) {
+  .introducao {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .introducao-text h1 {
+    font-size: 2rem;
+  }
+
+  .introducao-text h1::before {
+    content: "";
+    display: block;
+    background: url(../imgs/detalhe\ 2.svg) center no-repeat;
+    width: 30px;
+    height: 10px;
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    z-index: -1;
+  }
+}
+
+@media (max-width: 400px) {
+  .introducao img {
+    display: none;
+  }
+}

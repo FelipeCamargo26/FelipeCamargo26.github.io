@@ -1,0 +1,44 @@
+.contato {
+  background: #141414;
+  color: white;
+}
+
+.contato-conteiner {
+  max-width: 1200px; /* tamanho maximo que eu quero que meu site creça */
+  margin: 0 auto; /* Alinhamento do meu site */
+  padding: 120px 40px 60px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 100px;
+  align-items: center;
+}
+
+.contato-text {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.8;
+  color: #cccccc;
+}
+
+.contato-conteiner li {
+  font-size: 2.25rem;
+  line-height: 1.1;
+  font-weight: 700;
+  margin-bottom: 25px;
+  color: #ffffff;
+}
+
+.contato-copy {
+  grid-column: 1 / -1;
+  font-size: 1.125rem;
+}
+
+@media (max-width: 800px) {
+  .contato-conteiner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .contato-conteiner li {
+    font-size: 1.125rem;
+  }
+}

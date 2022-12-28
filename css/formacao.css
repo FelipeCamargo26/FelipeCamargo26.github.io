@@ -1,0 +1,144 @@
+.formacao {
+  background-image: linear-gradient(62deg, #877efb 0%, #1d1d1a 100%);
+  /* color: white; */
+}
+
+.formacao-conteiner {
+  max-width: 1200px; /* tamanho maximo que eu quero que meu site creça */
+  margin: 0 auto; /* Alinhamento do meu site */
+  padding: 120px 40px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  justify-items: center;
+}
+.formacao .subtitulo {
+  color: #e0e0e0;
+  max-width: 5ch;
+}
+.formacao-text {
+  font-size: 1.5rem;
+  line-height: 32px;
+  max-width: 50ch;
+  color: #ffffff;
+  margin-bottom: 60px;
+}
+
+.faculdade-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
+  margin-bottom: 60px;
+  color: #ffffff;
+}
+.faculdade {
+  flex: 1;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 40px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  /* align-items: flex-start; */
+}
+
+.faculdade-tipo {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #a3a3a3;
+  margin-bottom: 10px;
+}
+
+.faculdade-curso {
+  flex: 1;
+  font-size: 1.125em;
+  font-weight: 700;
+  line-height: 1.4;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.faculdade-curso::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(#3f5efb, #002637);
+  position: absolute;
+  top: 4px;
+  left: -44px;
+}
+
+.faculdade-inst {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #a3a3a3;
+}
+
+.cursos {
+  margin-bottom: 40px;
+}
+.formacao-extra h3 {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  font-weight: 700;
+  color: #ffffff;
+  position: relative;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.formacao-extra h3::before {
+  content: "";
+  display: block;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: -5px;
+  left: -30px;
+}
+
+.cursos h3::before {
+  background: url("../imgs/cursos.svg") no-repeat center center;
+}
+
+.idiomas h3::before {
+  background: url("../imgs/idiomas.svg") no-repeat center center;
+}
+
+.formacao-extra li {
+  font-size: 1.125rem;
+  line-height: 1.1;
+  font-weight: 400;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.formacao-extra span {
+  color: #8f8f8f;
+}
+
+.cursos li {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+  .formacao-conteiner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 60px 20px;
+  }
+  .formacao-text {
+    font-size: 1rem;
+  }
+
+  .formacao-extra h3::before {
+    position: initial;
+    margin-bottom: 10px;
+  }
+}

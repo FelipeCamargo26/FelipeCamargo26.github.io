@@ -1,0 +1,112 @@
+.experiencia {
+  max-width: 1200px; /* tamanho maximo que eu quero que meu site creça */
+  margin: 0 auto; /* Alinhamento do meu site */
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  justify-items: center;
+}
+
+.experiencia-text {
+  font-size: 1.5rem;
+  line-height: 32px;
+  max-width: 40ch;
+  color: #525252;
+  margin-bottom: 60px;
+}
+
+.experiencia-text strong {
+  color: #141414;
+}
+
+.experiencia .subtitulo {
+  color: #e0e0e0;
+}
+.empresa {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.empresa::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(#3f5efb, #002637);
+  position: absolute;
+  left: -3px;
+  top: 18px;
+}
+
+.empresa-ano {
+  position: absolute;
+  top: 20px;
+  left: -100px;
+  color: #525252;
+  font-size: 0.85rem;
+  text-align: right;
+  width: 80px;
+}
+.empresa-titulo {
+  font-size: 1.125em;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.empresa-descricao {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #525252;
+}
+
+.empresa-habilidade {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.empresa-habilidade li {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  background: #ffffff;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+@media (max-width: 800px) {
+  .experiencia {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .experiencia .subtitulo {
+    color: #141414;
+  }
+  .experiencia-text {
+    font-size: 1.25rem;
+  }
+  .empresa-ano {
+    position: initial;
+    order: 1;
+    width: initial;
+    text-align: left;
+  }
+  .empresa-ano::before {
+    content: "Ano: ";
+  }
+}
+
+@media (max-width: 800px) {
+  .empresa {
+    grid-template-columns: 1fr;
+  }
+}
